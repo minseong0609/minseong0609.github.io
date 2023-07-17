@@ -1,0 +1,336 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>Hugo 블로그를 시작하며.. - MS의 Hugo blog</title><meta name="Description" content=""><meta property="og:title" content="Hugo 블로그를 시작하며.." />
+<meta property="og:description" content="목차
+1. 블로그를 만들게 된 계기
+2. 블로그의 종류
+2-1. 어떤 블로그들이 있는지
+2-2. 왜 Hugo를 선택했는지 3. hugo 블로그를 만드는 과정
+3-1. Hugo 설치 3-2. 로컬에서 블로그를 관리할 폴더 만들기 3-3. 두개의 Github repository 만들기
+3-4. 블로그의 파일들이 들어갈 폴더 생성 3-5. 테마 찾고 적용하기
+3-6. 컨텐츠 생성해보기
+3-7. 게시물 만들기
+3-8. github page에 업로드
+4. 블로그를 만든 후기 1. 블로그를 만들게 된 계기평소에 여러 활동에 참여했지만 이를 자료로 남겨두지 않으니 나중에 나를 돌아볼때 잘 기억나지 않는" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://minseong0609.github.io/posts/create-blog/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-07-17T18:10:02+09:00" />
+<meta property="article:modified_time" content="2023-07-17T18:10:02+09:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hugo 블로그를 시작하며.."/>
+<meta name="twitter:description" content="목차
+1. 블로그를 만들게 된 계기
+2. 블로그의 종류
+2-1. 어떤 블로그들이 있는지
+2-2. 왜 Hugo를 선택했는지 3. hugo 블로그를 만드는 과정
+3-1. Hugo 설치 3-2. 로컬에서 블로그를 관리할 폴더 만들기 3-3. 두개의 Github repository 만들기
+3-4. 블로그의 파일들이 들어갈 폴더 생성 3-5. 테마 찾고 적용하기
+3-6. 컨텐츠 생성해보기
+3-7. 게시물 만들기
+3-8. github page에 업로드
+4. 블로그를 만든 후기 1. 블로그를 만들게 된 계기평소에 여러 활동에 참여했지만 이를 자료로 남겨두지 않으니 나중에 나를 돌아볼때 잘 기억나지 않는"/>
+<meta name="application-name" content="MS의 Hugo blog">
+<meta name="apple-mobile-web-app-title" content="MS의 Hugo blog">
+
+<meta name="theme-color" content="#f8f8f8"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="https://minseong0609.github.io/posts/create-blog/" />
+<link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Hugo 블로그를 시작하며..",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/minseong0609.github.io\/posts\/create-blog\/"
+        },"genre": "posts","wordcount":  821 ,
+        "url": "https:\/\/minseong0609.github.io\/posts\/create-blog\/","datePublished": "2023-07-17T18:10:02+09:00","dateModified": "2023-07-17T18:10:02+09:00","publisher": {
+            "@type": "Organization",
+            "name": "Minseong"},"author": {
+                "@type": "Person",
+                "name": "Minseong"
+            },"description": ""
+    }
+    </script><script src="//instant.page/5.2.0" defer type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+</head>
+
+<body header-desktop="" header-mobile=""><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark'); window.theme = theme;   window.isDark = window.theme !== 'light' }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('' === 'light' || '' === 'dark' || '' === 'black') setTheme(''), saveTheme(''); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="MS의 Hugo blog">MS의 Hugo blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/series/"> Series </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="https://github.com/minseong0609/" title="GitHub" rel="noopener noreferrer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="MS의 Hugo blog">MS의 Hugo blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/series/" title="">Series</a><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="https://github.com/minseong0609/" title="GitHub" rel="noopener noreferrer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Hugo 블로그를 시작하며..</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><span class="author fas fa-user-circle fa-fw"></span><a href="/" title="Author" rel=" author" class="author">Minseong</a>
+                </span>&nbsp;<span class="post-category">included in </span>&nbsp;<span class="post-category">category <a href="/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8/"><i class="far fa-folder fa-fw"></i>블로그</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-07-17">2023-07-17</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-07-17">2023-07-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;821 words&nbsp;<i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="content" id="content"><p>목차<!-- raw HTML omitted --></p>
+<p><a href="#%eb%b8%94%eb%a1%9c%ea%b7%b8%eb%a5%bc-%eb%a7%8c%eb%93%a4%ea%b2%8c-%eb%90%9c-%ea%b3%84%ea%b8%b0" rel="">1. 블로그를 만들게 된 계기</a><br>
+<a href="#%eb%b8%94%eb%a1%9c%ea%b7%b8%ec%9d%98-%ec%a2%85%eb%a5%98" rel="">2. 블로그의 종류</a><br>
+  <a href="#2-1.-%ec%96%b4%eb%96%a4-%eb%b8%94%eb%a1%9c%ea%b7%b8%eb%93%a4%ec%9d%b4-%ec%9e%88%eb%8a%94%ec%a7%80" rel="">2-1. 어떤 블로그들이 있는지</a><br>
+  <a href="#2-2.-%ec%99%9c-Hugo-%eb%b8%94%eb%a1%9c%ea%b7%b8%eb%a5%bc-%ec%84%a0%ed%83%9d%ed%96%88%eb%8a%94%ec%a7%80" rel="">2-2. 왜 Hugo를 선택했는지</a> <br>
+<a href="#3.-hugo-%eb%b8%94%eb%a1%9c%ea%b7%b8%eb%a5%bc-%eb%a7%8c%eb%93%9c%eb%8a%94-%ea%b3%bc%ec%a0%95" rel="">3. hugo 블로그를 만드는 과정</a><br>
+  <a href="#3-1.-%ec%99%9c-Hugo-%eb%b8%94%eb%a1%9c%ea%b7%b8%eb%a5%bc-%ec%84%a0%ed%83%9d%ed%96%88%eb%8a%94%ec%a7%80" rel="">3-1. Hugo 설치</a> <br>
+  <a href="#3-2.-%eb%a1%9c%ec%bb%ac%ec%97%90%ec%84%9c-%eb%b8%94%eb%a1%9c%ea%b7%b8%eb%a5%bc-%ea%b4%80%eb%a6%ac%ed%95%a0-%ed%8f%b4%eb%8d%94-%eb%a7%8c%eb%93%a4%ea%b8%b0" rel="">3-2. 로컬에서 블로그를 관리할 폴더 만들기</a> <br>
+  <a href="#3-3.-%eb%91%90%ea%b0%9c%ec%9d%98-Github-repository-%eb%a7%8c%eb%93%a4%ea%b8%b0" rel="">3-3. 두개의 Github repository 만들기</a><br>
+  <a href="#3-4.-%eb%b8%94%eb%a1%9c%ea%b7%b8%ec%9d%98-%ed%8c%8c%ec%9d%bc%eb%93%a4%ec%9d%b4-%eb%93%a4%ec%96%b4%ea%b0%88-%ed%8f%b4%eb%8d%94-%ec%83%9d%ec%84%b1" rel="">3-4. 블로그의 파일들이 들어갈 폴더 생성</a> <br>
+  <a href="#3-5.-%ed%85%8c%eb%a7%88-%ec%b0%be%ea%b3%a0-%ec%a0%81%ec%9a%a9%ed%95%98%ea%b8%b0" rel="">3-5. 테마 찾고 적용하기</a><br>
+  <a href="#3-6.-%ec%bb%a8%ed%85%90%ec%b8%a0-%ec%83%9d%ec%84%b1%ed%95%b4%eb%b3%b4%ea%b8%b0" rel="">3-6. 컨텐츠 생성해보기</a><br>
+  <a href="#3-7.-%ea%b2%8c%ec%8b%9c%eb%ac%bc-%eb%a7%8c%eb%93%a4%ea%b8%b0" rel="">3-7. 게시물 만들기</a><br>
+  <a href="#3-8.-github-page%ec%97%90-%ec%97%85%eb%a1%9c%eb%93%9c" rel="">3-8. github page에 업로드</a></p>
+<p><a href="#4.-%eb%b8%94%eb%a1%9c%ea%b7%b8%eb%a5%bc-%eb%a7%8c%eb%93%a0-%ed%9b%84%ea%b8%b0" rel="">4. 블로그를 만든 후기 </a></p>
+<h2 id="1-블로그를-만들게-된-계기" class="headerLink">
+    <a href="#1-%eb%b8%94%eb%a1%9c%ea%b7%b8%eb%a5%bc-%eb%a7%8c%eb%93%a4%ea%b2%8c-%eb%90%9c-%ea%b3%84%ea%b8%b0" class="header-mark"></a>1. 블로그를 만들게 된 계기</h2><p>평소에 여러 활동에 참여했지만 이를 자료로 남겨두지 않으니 나중에 나를 돌아볼때 잘 기억나지 않는<br>
+활동들이 종종 존재했다.<br>
+그리하여 블로그 제작에 대한 생각이 있을때 기술 블로그 챌린지라는 좋은 기회를 알게 되어 한번 만들어보게 되었다.</p>
+<p>나는 앞으로 프론트 개발자의 길을 걸어가고 싶기 때문에 이 블로그를 쓰면서 웹과 깃허브, 마크다운 언어에 더 익숙해질 것이다.</p>
+<p>이후의 내용은 알고리즘, CS지식 정리, 프로젝트 등의 활동 내용이 작성될 것이다.</p>
+<h2 id="2-블로그의-종류" class="headerLink">
+    <a href="#2-%eb%b8%94%eb%a1%9c%ea%b7%b8%ec%9d%98-%ec%a2%85%eb%a5%98" class="header-mark"></a>2. 블로그의 종류</h2><h4 id="2-1-어떤-블로그들이-있는지" class="headerLink">
+    <a href="#2-1-%ec%96%b4%eb%96%a4-%eb%b8%94%eb%a1%9c%ea%b7%b8%eb%93%a4%ec%9d%b4-%ec%9e%88%eb%8a%94%ec%a7%80" class="header-mark"></a>2-1. 어떤 블로그들이 있는지</h4><p>개발용 블로그를 위해 여러 블로그들을 찾아보니 다양한 블로그 종류를 찾을 수 있었다.
+누구나 간단하게 블로그를 만들 수 있는 <strong>티스토리</strong>나 <strong>벨로그</strong>, <strong>네이버 블로그</strong> 등과 나의 입맛에 맞게 수정할 수 있는 <strong>깃허브 블로그</strong> 등이 있었는데 나는 나의 개발 실력을 키우기 위해 깃허브 블로그 방향으로 가닥을 잡았다.</p>
+<h4 id="2-2-왜-hugo-블로그를-선택했는지" class="headerLink">
+    <a href="#2-2-%ec%99%9c-hugo-%eb%b8%94%eb%a1%9c%ea%b7%b8%eb%a5%bc-%ec%84%a0%ed%83%9d%ed%96%88%eb%8a%94%ec%a7%80" class="header-mark"></a>2-2. 왜 Hugo 블로그를 선택했는지</h4><p>깃허브 블로그에 대해 찾아보니 Jekyll과 Hugo를 찾을 수 있었다.</p>
+<p>여러 내용들을 찾아보며 느낀 점은 Jekyll은 테마도 많고 빌드도 빠르지만 빌드시간이나 테마변경의 어려움, 템플릿 문법의 한계, Ruby의 불편함 등 크지는 않지만 몇몇 부분에서 약간의 불편함들이 있다는 것을 알게 되었습니다.</p>
+<h2 id="3-hugo-블로그를-만드는-과정" class="headerLink">
+    <a href="#3-hugo-%eb%b8%94%eb%a1%9c%ea%b7%b8%eb%a5%bc-%eb%a7%8c%eb%93%9c%eb%8a%94-%ea%b3%bc%ec%a0%95" class="header-mark"></a>3. hugo 블로그를 만드는 과정</h2><h4 id="3-1-hugo-설치" class="headerLink">
+    <a href="#3-1-hugo-%ec%84%a4%ec%b9%98" class="header-mark"></a>3-1. Hugo 설치</h4><p>글쓴이는 OS가 window이기 때문에 Linux나 macOS와는 설치과정이 다를 수 있다.</p>
+<p>아래의 사진은 Hugo 홈페이지에서 볼 수 있는 화면이다.<br>
+각자의 OS에 맞게 설치방법이 다르며 안에 들어가면 각자의 방식에 따라 설치 방법을 알려준다.
+<figure><a class="lightgallery" href="/images/23.07.17_hugo_install_site.png" title="hugo설치 이미지 " data-thumbnail="/images/23.07.17_hugo_install_site.png">
+        <img
+            
+            loading="lazy"
+            src="/images/23.07.17_hugo_install_site.png"
+            srcset="/images/23.07.17_hugo_install_site.png, /images/23.07.17_hugo_install_site.png 1.5x, /images/23.07.17_hugo_install_site.png 2x"
+            sizes="auto"
+            alt="hugo설치 이미지 ">
+    </a></figure></p>
+<p>그리고 윈도우 사용자는 이때 꼭 <strong>extended 버전</strong>을 설치해야한다.<br>
+글쓴이는 처음에 Hugo 공식 github에서 최신zip버전을 이용하여 설치했는데 나중에 확장버전이 아니어서 오류가 발생했었다..</p>
+<p>설치한 이후에는 환경변수 설정을 해야한다.
+윈도우 키를 눌러서 <strong>시스템 환경 변수 편집</strong>을 적으면 이러한 창을 만날 수 있다.<br>
+<figure><a class="lightgallery" href="/images/23.07.17_systemsetting.png" title="환경변수 설정 이미지 " data-thumbnail="/images/23.07.17_systemsetting.png">
+        <img
+            
+            loading="lazy"
+            src="/images/23.07.17_systemsetting.png"
+            srcset="/images/23.07.17_systemsetting.png, /images/23.07.17_systemsetting.png 1.5x, /images/23.07.17_systemsetting.png 2x"
+            sizes="auto"
+            alt="환경변수 설정 이미지 ">
+    </a></figure><br>
+이 창에서 환경변수(N) 버튼을 누르면 아래의 이미지와 같은 창이 나오는데 <strong>시스템 변수</strong>의 변수목록에서 <strong>Path</strong>를 찾아서 더블클릭 해준다.
+<figure><a class="lightgallery" href="/images/23.07.17_SettingSystemVariable.png" title="시스템 세팅 이미지 " data-thumbnail="/images/23.07.17_SettingSystemVariable.png">
+        <img
+            
+            loading="lazy"
+            src="/images/23.07.17_SettingSystemVariable.png"
+            srcset="/images/23.07.17_SettingSystemVariable.png, /images/23.07.17_SettingSystemVariable.png 1.5x, /images/23.07.17_SettingSystemVariable.png 2x"
+            sizes="auto"
+            alt="시스템 세팅 이미지 ">
+    </a></figure></p>
+<p>이런 창이 나오면 <strong>새로 만들기</strong> 버튼을 눌러서 맨 아래에 hugo를 설치했던 경로를 적어준다.
+글쓴이는 C:\Hugo\bin 이라는 경로에 저장했기 때문이고 본인이 다른 경로에 Hugo를 설치했다면 그 경로를 적어줘도 문제없다.
+<figure><a class="lightgallery" href="/images/23.07.17_PathSetting.png" title="Path 세팅 이미지 " data-thumbnail="/images/23.07.17_PathSetting.png">
+        <img
+            
+            loading="lazy"
+            src="/images/23.07.17_PathSetting.png"
+            srcset="/images/23.07.17_PathSetting.png, /images/23.07.17_PathSetting.png 1.5x, /images/23.07.17_PathSetting.png 2x"
+            sizes="auto"
+            alt="Path 세팅 이미지 ">
+    </a></figure></p>
+<p>CMD창에서 사진처럼 <strong>hugo version</strong>을 입력했을때 아래처럼 나오면 성공이다
+<figure><a class="lightgallery" href="/images/23.07.17_hugoInstallCheck.png" title="휴고 설치 체크 이미지 " data-thumbnail="/images/23.07.17_hugoInstallCheck.png">
+        <img
+            
+            loading="lazy"
+            src="/images/23.07.17_hugoInstallCheck.png"
+            srcset="/images/23.07.17_hugoInstallCheck.png, /images/23.07.17_hugoInstallCheck.png 1.5x, /images/23.07.17_hugoInstallCheck.png 2x"
+            sizes="auto"
+            alt="휴고 설치 체크 이미지 ">
+    </a></figure></p>
+<h4 id="3-2-로컬에서-블로그를-다룰-폴더-만들기" class="headerLink">
+    <a href="#3-2-%eb%a1%9c%ec%bb%ac%ec%97%90%ec%84%9c-%eb%b8%94%eb%a1%9c%ea%b7%b8%eb%a5%bc-%eb%8b%a4%eb%a3%b0-%ed%8f%b4%eb%8d%94-%eb%a7%8c%eb%93%a4%ea%b8%b0" class="header-mark"></a>3-2. 로컬에서 블로그를 다룰 폴더 만들기</h4><p>다음은 로컬에서 블로그 파일들을 편집하고 깃허브에 올릴 파일을 만들어야 한다.
+글쓴이는 간단하게 Hugo_blog로 만들었다.</p>
+<h4 id="3-3-두개의-github-repository-만들기" class="headerLink">
+    <a href="#3-3-%eb%91%90%ea%b0%9c%ec%9d%98-github-repository-%eb%a7%8c%eb%93%a4%ea%b8%b0" class="header-mark"></a>3-3. 두개의 Github repository 만들기</h4><p>이번 과정은 두개의 github repo를 만들어야 한다.
+하나의 레포는 내 hugo블로그 내용이 저장될 곳이고
+다른 하나의 레포는 하나는 그 블로그를 호스팅할 용도이다.</p>
+<p>내 hugo 블로그가 올라갈 repo의 경우 블로그 안에 채울 내용과 소스파일 등이 저장되는데 공개하는 것이 싫다면 private으로 생성해도 된다. (레포 이름은 자유롭게 만들어도 상관없다)
+<figure><a class="lightgallery" href="/images/23.07.17_blogRepoCreate.png" title="블로그가 올라갈 레포 " data-thumbnail="/images/23.07.17_blogRepoCreate.png">
+        <img
+            
+            loading="lazy"
+            src="/images/23.07.17_blogRepoCreate.png"
+            srcset="/images/23.07.17_blogRepoCreate.png, /images/23.07.17_blogRepoCreate.png 1.5x, /images/23.07.17_blogRepoCreate.png 2x"
+            sizes="auto"
+            alt="블로그가 올라갈 레포 ">
+    </a></figure></p>
+<p>그리고 다른 한개는 github에서 호스팅을 해야함으로 꼭 <strong>USERNAME.github.io</strong>라는 이름으로 만들어야 한다. 그리고 무료로 호스팅을 이용한다면 <strong>public</strong>으로 만들어야하며 private으로 생성하고 싶다면 github pro를 이용해야 한다.<br>
+<del>본인은 github name이 minseong0609이기에 minseong0609.github.io라는 이름으로 만들었다</del></p>
+<h4 id="3-4-블로그의-파일들이-들어갈-폴더-생성" class="headerLink">
+    <a href="#3-4-%eb%b8%94%eb%a1%9c%ea%b7%b8%ec%9d%98-%ed%8c%8c%ec%9d%bc%eb%93%a4%ec%9d%b4-%eb%93%a4%ec%96%b4%ea%b0%88-%ed%8f%b4%eb%8d%94-%ec%83%9d%ec%84%b1" class="header-mark"></a>3-4. 블로그의 파일들이 들어갈 폴더 생성</h4><p>블로그의 파일을 저장할 폴더로 들어간다.
+<code>hugo new site 파일명</code>을 하면 현재의 현재의 경로에 블로그 데이터가 들어갈 폴더가 생긴다.<br>
+글쓴이는 hugo_blog로 했으며 자유롭게 이름을 지어도 괜찮다.
+<figure><a class="lightgallery" href="/images/23.07.17_hugoNewSite.png" title=" hugo new site " data-thumbnail="/images/23.07.17_hugoNewSite.png">
+        <img
+            
+            loading="lazy"
+            src="/images/23.07.17_hugoNewSite.png"
+            srcset="/images/23.07.17_hugoNewSite.png, /images/23.07.17_hugoNewSite.png 1.5x, /images/23.07.17_hugoNewSite.png 2x"
+            sizes="auto"
+            alt=" hugo new site ">
+    </a></figure></p>
+<h4 id="3-5-테마-찾고-적용하기" class="headerLink">
+    <a href="#3-5-%ed%85%8c%eb%a7%88-%ec%b0%be%ea%b3%a0-%ec%a0%81%ec%9a%a9%ed%95%98%ea%b8%b0" class="header-mark"></a>3-5. 테마 찾고 적용하기</h4><p>이제 원하는 hugo 테마를 찾고 적용해야 한다.<br>
+<a href="https://themes.gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo 테마 홈페이지</a>.
+홈페이지에 가면 다양한 테마들을 찾을 수 있는데 이 블로그는 <a href="https://themes.gohugo.io/themes/doit/" target="_blank" rel="noopener noreferrer">DoIt</a> 라는 테마를 이용하여 만들어졌다. 각 테마마다 그리고 OS마다 적용방법이나 사용방법이 조금씩 다르니 이 부분은 각자 읽어보고 참고하면 좋을 것 같다.</p>
+<p>내가 선택한 DoIt는 폴더에서 서브모듈로 추가할 수 있었다.
+아래의 이미지처럼 진행된다면 성공이다.
+<figure><a class="lightgallery" href="/images/23.07.17_DoItDownload.png" title=" DoIt 테마 설치 " data-thumbnail="/images/23.07.17_DoItDownload.png">
+        <img
+            
+            loading="lazy"
+            src="/images/23.07.17_DoItDownload.png"
+            srcset="/images/23.07.17_DoItDownload.png, /images/23.07.17_DoItDownload.png 1.5x, /images/23.07.17_DoItDownload.png 2x"
+            sizes="auto"
+            alt=" DoIt 테마 설치 ">
+    </a></figure>
+서브모듈로 하는 이유는 나중에 DoIt 테마의 제작자가 최신버전으로 업데이트했을때 이 명령어로 업데이트할 수 있기 때문이다.<br>
+<code>git submodule update --remote --merge</code></p>
+<p>이렇게 한 후 폴더에서 <strong>config.toml</strong>이라는 파일을 찾아서 테마에 맞게 여러 설정들을 해주면 된다. 이 경우도 각 테마의 설명을 참고하면 좋다.<br>
+단 baseURL은 본인의 블로그 주소 ➡ Username.github.io를 설정 해주면 된다.</p>
+<h4 id="3-6-두개의-repo-연결하기" class="headerLink">
+    <a href="#3-6-%eb%91%90%ea%b0%9c%ec%9d%98-repo-%ec%97%b0%ea%b2%b0%ed%95%98%ea%b8%b0" class="header-mark"></a>3-6. 두개의 repo 연결하기</h4><p>이제 블로그가 올라갈 레포와 호스팅을 해주는 레포를 연결할 차례이다.<br>
+cmd창을 열고 3-4에서 블로그 폴더를 만들었던 경로로 이동한다.</p>
+<pre tabindex="0"><code>git remote add origin &lt;본인의 첫번째만든 repo주소&gt;
+</code></pre><pre tabindex="0"><code>git submodule add -b master &lt;두번째 만든 githbu.io repo주소&gt; public
+</code></pre><p><figure><a class="lightgallery" href="/images/23.07.17_gitRemoteSetting.png" title=" 두 레포 원격 연결 " data-thumbnail="/images/23.07.17_gitRemoteSetting.png">
+        <img
+            
+            loading="lazy"
+            src="/images/23.07.17_gitRemoteSetting.png"
+            srcset="/images/23.07.17_gitRemoteSetting.png, /images/23.07.17_gitRemoteSetting.png 1.5x, /images/23.07.17_gitRemoteSetting.png 2x"
+            sizes="auto"
+            alt=" 두 레포 원격 연결 ">
+    </a></figure>
+위의 사진처럼 진행하면 hugo_blog 폴더 안에 public 이라는 폴더가 만들어진다.</p>
+<h4 id="3-7-게시물-만들기" class="headerLink">
+    <a href="#3-7-%ea%b2%8c%ec%8b%9c%eb%ac%bc-%eb%a7%8c%eb%93%a4%ea%b8%b0" class="header-mark"></a>3-7. 게시물 만들기</h4><p>보통은 <code>hugo new &lt;파일명&gt; </code>을 이용하여 업로드할 컨덴츠를 만들수 있다. 내가 사용한 DoIt의 경우 posts/파일명.md를 했어야 했다.</p>
+<p>파일이 만들어진다면 cmd창에 <code>hugo server -D</code>를 입력하면 <a href="http://localhost:1313/" target="_blank" rel="noopener noreferrer"> http://localhost:1313/</a>에서 확인할 수있다. 이 링크의 경우 로컬에서만 보이는 부분이고 실제로 다른 사람이 볼 수 있는 단계는 아니다.</p>
+<h4 id="3-8-github-page에-업로드" class="headerLink">
+    <a href="#3-8-github-page%ec%97%90-%ec%97%85%eb%a1%9c%eb%93%9c" class="header-mark"></a>3-8. github page에 업로드</h4><p>github repository가 두번 각각 올려주는 것이 좋다.</p>
+<h5 id="usernamegithubio-에-push-하기" class="headerLink">
+    <a href="#usernamegithubio-%ec%97%90-push-%ed%95%98%ea%b8%b0" class="header-mark"></a>username.github.io 에 push 하기</h5><ol>
+<li>cmd창에서 아까 블로그 파일을 만들었던 C:\hugo 에서 <code>hugo -t 테마이름</code> 명령어를 친다.</li>
+<li><code>cd public</code>을 통해 public 디렉토리로 이동한다.<br>
+그러면 아까와는 달리 다른 파일들이 생성된 것을 볼 수 있다.</li>
+<li><code>git add .</code> 수정된 파일들을 index에 올린다.</li>
+<li><code>git commit -m &quot;커밋메세지&quot;</code> 수정된 파일들을 commit한다.</li>
+<li><code>git push origin main</code>을 통해 username.github.io에 업로드한다.</li>
+</ol>
+<p>이렇게 하면 지금까지 만든 내용을 다른 사람이 확인할 수 있다.<br>
+하지만 코드 관리를 위해 블로그 레포도 push해주면 좋다.</p>
+<h5 id="blog-repo-push-하기" class="headerLink">
+    <a href="#blog-repo-push-%ed%95%98%ea%b8%b0" class="header-mark"></a>blog repo push 하기</h5><ol>
+<li><code>cd ..</code></li>
+<li><code>git add .</code></li>
+<li><code>git commit -m &quot;커밋메세지&quot;</code></li>
+<li><code>git push origin main</code><br>
+위의 과정을 거치면 블로그의 업로드가 완료된다.</li>
+</ol>
+<h2 id="4-블로그를-만든-후기" class="headerLink">
+    <a href="#4-%eb%b8%94%eb%a1%9c%ea%b7%b8%eb%a5%bc-%eb%a7%8c%eb%93%a0-%ed%9b%84%ea%b8%b0" class="header-mark"></a>4. 블로그를 만든 후기</h2><p>생각보다 많은 시간이 걸리고 힘들었지만 실제로 배포가 되어 이를 확인했을때 뿌뜻했던 것 같다. 지금까지 놓치고 있던 많은 과거 경험들이나 레퍼런스를 정리하거나 블로그 테마를 커스텀, 업로드 자동화, 다른 기능 추가 등 여러 할 일들도 많이 생겼다. 앞으로 꾸준히 블로그 활동을 해볼 생각이다.</p>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-07-17</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share"></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"></div>
+</div>
+</article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.115.3">Hugo</a>&nbsp;|&nbsp;Theme - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.4.0"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">Minseong</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="Back to Top">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+</body>
+
+</html>

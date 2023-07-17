@@ -1,9 +1,9 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>All Posts - MS의 Hugo blog</title>
-        <link>https://minseong0609.github.io/posts/</link>
-        <description>All Posts | MS의 Hugo blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 17 Jul 2023 18:10:02 &#43;0900</lastBuildDate><atom:link href="https://minseong0609.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <title>블로그 - Category - MS의 Hugo blog</title>
+        <link>https://minseong0609.github.io/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8/</link>
+        <description>블로그 - Category - MS의 Hugo blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 17 Jul 2023 18:10:02 &#43;0900</lastBuildDate><atom:link href="https://minseong0609.github.io/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8/" rel="self" type="application/rss+xml" /><item>
     <title>Hugo 블로그를 시작하며..</title>
     <link>https://minseong0609.github.io/posts/create-blog/</link>
     <pubDate>Mon, 17 Jul 2023 18:10:02 &#43;0900</pubDate><author>
