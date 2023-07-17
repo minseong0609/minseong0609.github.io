@@ -3,14 +3,7 @@
         <title>MS의 Hugo blog</title>
         <link>https://minseong0609.github.io/</link>
         <description>MS의 Hugo blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 15 Jul 2023 18:10:02 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language>
             <atom:link href="https://minseong0609.github.io/index.xml" rel="self" type="application/rss+xml" />
-        <item>
-    <title>Hugo 블로그를 시작하며..</title>
-    <link>https://minseong0609.github.io/posts/test-post/</link>
-    <pubDate>Sat, 15 Jul 2023 18:10:02 &#43;0900</pubDate><author>
-        <name>Minseong</name>
-    </author><guid>https://minseong0609.github.io/posts/test-post/</guid>
-    <description><![CDATA[첫 글입니다앞으로 꾸준히 올려보겠습니다]]></description>
-</item></channel>
+        </channel>
 </rss>
